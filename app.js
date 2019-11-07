@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 
+const port = 4000;
+
+
 app.get("/", (req, res) => {
     res.send(`<!DOCTYPE html>
 <html>
@@ -18,7 +21,7 @@ app.get("/", (req, res) => {
       <form>
         <div class="d-flex align-items-center">
           <input placeholder="Ajouter votre texte ici" autofocus autocomplete="off" class="form-control mr-3" type="text" style="flex: 1;">
-          <button class="btn btn-primary">Ajouter vos objets</button>
+          <button class="btn btn-warning">Ajouter vos objets</button>
         </div>
       </form>
     </div>
@@ -53,6 +56,9 @@ app.get("/", (req, res) => {
 </html>`)
 })
 
-const port = 4000;
+
+app.post("/", (req, res) => {
+    res.send("ça marche, c'est tres bien")
+});
 
 app.listen(port);
