@@ -1,6 +1,17 @@
 const express = require("express");
 const app = express();
+const Sequelize = require("sequelize");
 const port = 4000;
+const db = new Sequelize("todolist", "todolist", "todolist", {
+    host: "localhost",
+    dialect: "postgres"
+});
+
+db.authenticate().then(() => {
+    console.log('Connection has been established successfully.');
+}).catch(err => {
+    console.error('Unable to connect to the database:', err);
+});
 
 app.use(express.urlencoded({
     extended: false
@@ -12,7 +23,8 @@ app.get("/", (req, res) => {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple To-Do App</title>
+  <title>To-Do Application</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
 <body>
