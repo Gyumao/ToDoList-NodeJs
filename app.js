@@ -80,4 +80,8 @@ app.post("/", (req, res) => {
         });
 });
 
+app.post("/update-item", (req, res) => {
+    res.send("test le update")
+});
+
 app.listen(port);
