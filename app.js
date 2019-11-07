@@ -17,6 +17,8 @@ app.use(express.urlencoded({
     extended: false
 }));
 
+app.use(express.static(__dirname + '/public'));
+
 app.get("/", (req, res) => {
     res.send(`<!DOCTYPE html>
 <html>
@@ -24,9 +26,9 @@ app.get("/", (req, res) => {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To-Do Application</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-</head>
+  <link rel = "stylesheet" type = "text/css" href = "css/style.css"/>
+  </head>
 <body>
   <div class="container">
     <h1 class="display-4 text-center py-1">To-Do List Application</h1>
