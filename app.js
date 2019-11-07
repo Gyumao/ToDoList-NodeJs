@@ -10,20 +10,20 @@ const db = require("./config/database");
 
 // Test connection database
 db.authenticate().then(() => {
-    console.log('Connection has been established successfully.');
+  console.log('Connection has been established successfully.');
 }).catch(err => {
-    console.error('Unable to connect to the database:', err);
+  console.error('Unable to connect to the database:', err);
 });
 
 app.use(express.urlencoded({
-    extended: false
+  extended: false
 }));
-
 app.use(express.static("public"));
+app.use(express.json());
 
 app.get("/", (req, res) => {
-    Item.findAll().then(items => {
-        res.send(`<!DOCTYPE html>
+  Item.findAll().then(items => {
+    res.send(`<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -64,24 +64,25 @@ app.get("/", (req, res) => {
         <script src="/js/edit.js"></script>
         </body>
         </html>`);
-    });
+  });
 });
 
 
 app.post("/", (req, res) => {
-    Item.create({
-            item: req.body.item
-        })
-        .then(() => {
-            res.redirect("/")
-        })
-        .catch(err => {
-            console.log(err);
-        });
+  Item.create({
+      item: req.body.item
+    })
+    .then(() => {
+      res.redirect("/")
+    })
+    .catch(err => {
+      console.log(err);
+    });
 });
 
 app.post("/update-item", (req, res) => {
-    res.send("test le update")
+  console.log(req.body.itemUpdated);
+  res.send("test le update")
 });
 
 app.listen(port);
