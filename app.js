@@ -12,37 +12,37 @@ app.get("/", (req, res) => {
 </head>
 <body>
   <div class="container">
-    <h1 class="display-4 text-center py-1">To-Do App</h1>
+    <h1 class="display-4 text-center py-1">To-Do List application</h1>
     
     <div class="jumbotron p-3 shadow-sm">
       <form>
         <div class="d-flex align-items-center">
-          <input autofocus autocomplete="off" class="form-control mr-3" type="text" style="flex: 1;">
-          <button class="btn btn-primary">Add New Item</button>
+          <input placeholder="Ajouter votre texte ici" autofocus autocomplete="off" class="form-control mr-3" type="text" style="flex: 1;">
+          <button class="btn btn-primary">Ajouter vos objets</button>
         </div>
       </form>
     </div>
     
     <ul class="list-group pb-5">
       <li class="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
-        <span class="item-text">Fake example item #1</span>
+        <span class="item-text">NodeJs</span>
         <div>
-          <button class="edit-me btn btn-secondary btn-sm mr-1">Edit</button>
-          <button class="delete-me btn btn-danger btn-sm">Delete</button>
+          <button class="edit-me btn btn-success btn-sm mr-1">Ajouter</button></button>
+          <button class="delete-me btn btn-danger btn-sm">Supprimer</button>
         </div>
       </li>
       <li class="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
-        <span class="item-text">Fake example item #2</span>
+        <span class="item-text">JavaScript</span>
         <div>
-          <button class="edit-me btn btn-secondary btn-sm mr-1">Edit</button>
-          <button class="delete-me btn btn-danger btn-sm">Delete</button>
+          <button class="edit-me btn btn-success btn-sm mr-1">Ajouter</button>
+          <button class="delete-me btn btn-danger btn-sm">Supprimer</button>
         </div>
       </li>
       <li class="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
-        <span class="item-text">Fake example item #3</span>
+        <span class="item-text">VueJs</span>
         <div>
-          <button class="edit-me btn btn-secondary btn-sm mr-1">Edit</button>
-          <button class="delete-me btn btn-danger btn-sm">Delete</button>
+          <button class="edit-me btn btn-success btn-sm mr-1">Ajouter</button>
+          <button class="delete-me btn btn-danger btn-sm">Supprimer</button>
         </div>
       </li>
     </ul>
