@@ -3,7 +3,8 @@ document.addEventListener("click", function (e) {
         let userInput = prompt("veuillez entrer votre nouvelle tâche...");
         axios
             .post("/update-item", {
-                itemUpdated: userInput
+                itemUpdated: userInput,
+                id: e.target.getAttribute("data-id")
             })
             .then()
             .cathc(err => {
