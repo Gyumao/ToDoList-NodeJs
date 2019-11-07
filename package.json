@@ -1,0 +1,20 @@
+{
+  "name": "ToDoList-NodeJs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gyumao/ToDoList-NodeJs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gyumao/ToDoList-NodeJs/issues"
+  },
+  "homepage": "https://github.com/Gyumao/ToDoList-NodeJs#readme"
+}
