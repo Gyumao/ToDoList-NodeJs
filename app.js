@@ -20,6 +20,9 @@ app.use(express.urlencoded({
 app.use(express.static(__dirname + '/public'));
 
 app.get("/", (req, res) => {
+    Item.findAll().then(items => {
+        console.log(items);
+    });
     res.send(`<!DOCTYPE html>
 <html>
 <head>
