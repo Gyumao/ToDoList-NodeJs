@@ -45,34 +45,23 @@ app.get("/", (req, res) => {
       </form>
     </div>
     
-    <ul class="list-group pb-5">
-      <li class="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
-        <span class="item-text">NodeJs</span>
-        <div>
-          <button class="edit-me btn btn-success btn-sm mr-1">Ajouter</button></button>
-          <button class="delete-me btn btn-danger btn-sm">Supprimer</button>
+    <ul class = "list-group pb-5" >
+        ${items
+          .map(function (item) {
+                    return `
+                <li class="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
+                  <span class="item-text">${item.dataValues.item}</span>
+                  <div>
+                    <button class="edit-me btn btn-secondary btn-sm mr-1">Edit</button>
+                    <button class="delete-me btn btn-danger btn-sm">Delete</button>
+                  </div>
+                </li>`;
+                })
+                .join("")}
+         </ul>
         </div>
-      </li>
-      <li class="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
-        <span class="item-text">JavaScript</span>
-        <div>
-          <button class="edit-me btn btn-success btn-sm mr-1">Ajouter</button>
-          <button class="delete-me btn btn-danger btn-sm">Supprimer</button>
-        </div>
-      </li>
-      <li class="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
-        <span class="item-text">VueJs</span>
-        <div>
-          <button class="edit-me btn btn-success btn-sm mr-1">Ajouter</button>
-          <button class="delete-me btn btn-danger btn-sm">Supprimer</button>
-        </div>
-      </li>
-    </ul>
-    
-  </div>
-  
-</body>
-</html>`)
+        </body>
+        </html>`);
     });
 });
 
