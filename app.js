@@ -2,7 +2,9 @@ const express = require("express");
 const app = express();
 const port = 4000;
 
+// Models
 const Item = require("./models/Item");
+
 // Database
 const db = require("./config/database");
 
@@ -21,9 +23,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.get("/", (req, res) => {
     Item.findAll().then(items => {
-        console.log(items);
-    });
-    res.send(`<!DOCTYPE html>
+        res.send(`<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -73,7 +73,8 @@ app.get("/", (req, res) => {
   
 </body>
 </html>`)
-})
+    });
+});
 
 
 app.post("/", (req, res) => {
