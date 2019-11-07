@@ -1,12 +1,11 @@
 const express = require("express");
 const app = express();
-const Sequelize = require("sequelize");
 const port = 4000;
-const db = new Sequelize("todolist", "todolist", "todolist", {
-    host: "localhost",
-    dialect: "postgres"
-});
 
+// Database
+const db = require("./confiq/database");
+
+// Test connection database
 db.authenticate().then(() => {
     console.log('Connection has been established successfully.');
 }).catch(err => {
