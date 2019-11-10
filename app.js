@@ -59,6 +59,23 @@ app.get("/", (req, res) => {
                 .join("")}
          </ul>
         </div>
+  <footer>
+    <div class="contact-footer">
+      <figure>
+            <a href="mailto:dev.richard.g@gmail.com:" title="my Email">
+                <img src="pictures-and-son/mail4.png" alt="logo-mail" width="70" height="70"></a>
+
+            <a href="https://www.linkedin.com/in/richard-gobert-3b9248193/" title="my linkedin" target="_blank">
+                <img src="pictures-and-son/linkedin1.png" alt="logo-linkedin" width="70" height="70"></a>
+
+            <a href="https://github.com/Gyumao" title="Github" target="_blank">
+                <img alt="logo-Github" src="pictures-and-son/github1.png" width="70" height="70" /></a>
+        </figure>
+    </div>
+    <div>
+        <p class="p-footer">@ Ce site a été réalisé dans le cadre d'un exercice de formation Yes We Web.</p>
+    </div>
+</footer>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="/js/edit.js"></script>
         </body>
