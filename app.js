@@ -46,14 +46,13 @@ app.get("/", (req, res) => {
     </div>
     
     <ul class = "list-group pb-5" >
-        ${items
-          .map(function (item) {
+        ${items.map(function (item) {
                     return `
                 <li class="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
                   <span class="item-text">${item.dataValues.item}</span>
                   <div>
-                    <button data-id="${item.dataValues.id}"class = "edit-me btn btn-secondary btn-sm mr-1"> Edit </button>
-                    <button data-id="${item.dataValues.id}"class = "delete-me btn btn-danger btn-sm"> Delete </button>
+                    <button data-id="${item.dataValues.id}"class = "edit-me btn btn-success btn-sm mr-1"> Modifier </button>
+                    <button data-id="${item.dataValues.id}"class = "delete-me btn btn-danger btn-sm"> Supprimer </button>
                   </div>
                 </li>`;
                 })
