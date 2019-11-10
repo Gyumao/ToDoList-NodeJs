@@ -53,3 +53,14 @@ h1 {
     font-size: 1.5rem;
     color: black;
 }
+
+.contact-footer {
+    text-align: center;
+}
+
+.p-footer {
+    font-size: 1.5rem;
+    background: -webkit-linear-gradient(yellow, red, yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
